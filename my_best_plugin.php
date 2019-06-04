@@ -15,7 +15,10 @@ require_once( __DIR__ . '/includes/favourite_core.php' );
 
 add_filter('the_excerpt', 'mbpl_return_the_excerpt');
 add_filter('the_content', 'mbpl_return_the_content');
+//add_filter('the_title', 'mbpl_return_the_title');
 add_action('wp_enqueue_scripts', 'mbpl_enqueue_scripts');
+add_action('admin_enqueue_scripts', 'mbpl_admin_enqueue_scripts');
 add_action('wp_ajax_mbpl_ajax_add', 'mbpl_ajax_add');
 add_action('wp_ajax_mbpl_ajax_delete', 'mbpl_ajax_delete');
+add_action('wp_dashboard_setup', 'mbpl_admin_widget');
 
